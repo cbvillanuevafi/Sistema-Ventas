@@ -1,0 +1,163 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261031102519
+Nombre de usuario: DESKTOP-7GJVOD3\PC
+Usuario RunAs: DESKTOP-7GJVOD3\PC
+Nombre de la configuración: 
+Máquina: DESKTOP-7GJVOD3 (Microsoft Windows NT 10.0.26200.0)
+Aplicación host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Id. de proceso: 7692
+PSVersion: 5.1.26100.9711
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9711
+BuildVersion: 10.0.26100.9711
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\PC\Desktop\auditoria_completa.txt
+PS C:\Users\PC> cd $HOME\Desktop
+PS C:\Users\PC\Desktop> mkdir Sistema_Ventas
+
+
+    Directorio: C:\Users\PC\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        31/10/2026     10:25                Sistema_Ventas
+
+
+PS C:\Users\PC\Desktop> cd Sistema_Ventas
+PS C:\Users\PC\Desktop\Sistema_Ventas> mkdir Frontend, Backend, BaseDatos
+
+
+    Directorio: C:\Users\PC\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        31/10/2026     10:26                Frontend
+d-----        31/10/2026     10:26                Backend
+d-----        31/10/2026     10:26                BaseDatos
+
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> echo "Version 1.0 del Sistema de Ventas" > README.md
+PS C:\Users\PC\Desktop\Sistema_Ventas> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Version 1.0 del Sistema de Ventas"
+PS C:\Users\PC\Desktop\Sistema_Ventas> ls
+
+
+    Directorio: C:\Users\PC\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        31/10/2026     10:26                Backend
+d-----        31/10/2026     10:26                BaseDatos
+d-----        31/10/2026     10:26                Frontend
+-a----        31/10/2026     10:26             72 README.md
+
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> git init
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> New-Item Frontend\.gitkeep -ItemType File
+
+
+    Directorio: C:\Users\PC\Desktop\Sistema_Ventas\Frontend
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        31/10/2026     10:28              0 .gitkeep
+
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> New-Item Backend\.gitkeep -ItemType File
+
+
+    Directorio: C:\Users\PC\Desktop\Sistema_Ventas\Backend
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        31/10/2026     10:28              0 .gitkeep
+
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> New-Item BaseDatos\.gitkeep -ItemType File
+
+
+    Directorio: C:\Users\PC\Desktop\Sistema_Ventas\BaseDatos
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        31/10/2026     10:28              0 .gitkeep
+
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> git add .
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> git commit -m "Día 1: Despliegue de la estructura base"
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> git branch -M main
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> git remote add origin https://github.com/cbvillanuevafi/Sistema-Ventas.git
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> git push -u origin main
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> echo "Conectando al servidor SQL..." > BaseDatos\conexion.ps1
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Conectando al servidor SQL..."
+PS C:\Users\PC\Desktop\Sistema_Ventas> echo "Actualizacion Dia 2: Modulo DB agregado" >> README.md
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Actualizacion Dia 2: Modulo DB agregado"
+PS C:\Users\PC\Desktop\Sistema_Ventas> mkdir Pruebas_Unitarias
+
+
+    Directorio: C:\Users\PC\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        31/10/2026     10:33                Pruebas_Unitarias
+
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> New-Item Pruebas_Unitarias\.gitkeep -ItemType File
+
+
+    Directorio: C:\Users\PC\Desktop\Sistema_Ventas\Pruebas_Unitarias
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        31/10/2026     10:33              0 .gitkeep
+
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> ls
+
+
+    Directorio: C:\Users\PC\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        31/10/2026     10:28                Backend
+d-----        31/10/2026     10:28                BaseDatos
+d-----        31/10/2026     10:28                Frontend
+d-----        31/10/2026     10:33                Pruebas_Unitarias
+-a----        31/10/2026     10:33            154 README.md
+
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> Get-Content README.md
+Version 1.0 del Sistema de Ventas
+Actualizacion Dia 2: Modulo DB agregado
+PS C:\Users\PC\Desktop\Sistema_Ventas> Get-Content BaseDatos\conexion.ps1
+Conectando al servidor SQL...
+PS C:\Users\PC\Desktop\Sistema_Ventas> git add .
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> git commit -m "Día 2: Agregados scripts de DB y carpeta de pruebas"
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> git push
+
+PS C:\Users\PC\Desktop\Sistema_Ventas> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261031103636
+**********************
